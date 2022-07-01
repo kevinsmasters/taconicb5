@@ -1,0 +1,165 @@
+
+#taconicHeader {
+    background-color: $tac-palepurp;
+    .navbar {
+        @include media($mobile-sm) {
+            .container-fluid {
+                align-items: flex-start;
+            }
+        }
+        
+        .navbar-toggler {
+            display: block!important;
+            margin-left: 1.25em;
+            padding: 0;
+            border: none;
+            font-size: 1.8em;
+            &:focus,
+            &:focus-visible {   
+                box-shadow: none;
+                border: none;
+            }
+            .navbar-toggler-icon {
+                width: 1.7em;
+                height: 1.7em;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2893, 32, 91, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+            position: relative;
+            z-index: 502;
+        }
+        .region-header {
+            display: flex;
+            width: 60%;
+            @include media($mobile-sm) {
+                flex-direction: column;
+                width: 73%;
+            }
+            .navbar-brand .site-logo img {
+                max-height: 2.2em;
+            }
+            #block-quoteandtel {
+                margin-right: 1.6em;
+                margin-left: auto;
+                @include media($mobile-sm) {
+                    margin-left: 0;
+                }
+                .field--name-body {
+                    display: flex;
+                    align-items: center;
+                    padding: 0;
+                    @include media($mobile-sm) {
+                        flex-direction: column;
+                        align-items: flex-end;
+                    }
+                    #headerPhone {
+                        padding-left: 2.1em;
+                        padding-top: .4em;
+                        padding-bottom: .4em;
+                        margin-right: 1.6em;
+                        font-size: 1.4em;
+                        color: $tac-purple;
+                        background-position: left center;
+                        background-size: 1.5em;
+                        background-repeat: no-repeat;
+                        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDQ0IDQ0Ij4KICA8ZyBpZD0iR3JvdXBfMjIxIiBkYXRhLW5hbWU9Ikdyb3VwIDIyMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMC40NjMpIj4KICAgIDxjaXJjbGUgaWQ9IkVsbGlwc2VfMiIgZGF0YS1uYW1lPSJFbGxpcHNlIDIiIGN4PSIyMiIgY3k9IjIyIiByPSIyMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjQ2MykiIGZpbGw9IiM1ZDIwNWIiLz4KICAgIDxnIGlkPSJJY29uX2ZlYXRoZXItcGhvbmUtb3V0Z29pbmciIGRhdGEtbmFtZT0iSWNvbiBmZWF0aGVyLXBob25lLW91dGdvaW5nIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4xMjMgMTEuMzgxKSI+CiAgICAgIDxwYXRoIGlkPSJQYXRoXzEyNSIgZGF0YS1uYW1lPSJQYXRoIDEyNSIgZD0iTTI1LjA2NiwxOS40Mjh2My4zYTIuMiwyLjIsMCwwLDEtMi40LDIuMiwyMS43OTEsMjEuNzkxLDAsMCwxLTkuNS0zLjM4LDIxLjQ3MSwyMS40NzEsMCwwLDEtNi42MDctNi42MDdBMjEuNzkxLDIxLjc5MSwwLDAsMSwzLjE3Nyw1LjQsMi4yLDIuMiwwLDAsMSw1LjM2OCwzaDMuM2EyLjIsMi4yLDAsMCwxLDIuMiwxLjg5NCwxNC4xMzgsMTQuMTM4LDAsMCwwLC43NzEsMy4wOTQsMi4yLDIuMiwwLDAsMS0uNSwyLjMyM2wtMS40LDEuNGExNy42MTcsMTcuNjE3LDAsMCwwLDYuNjA3LDYuNjA3bDEuNC0xLjRhMi4yLDIuMiwwLDAsMSwyLjMyMy0uNSwxNC4xMzgsMTQuMTM4LDAsMCwwLDMuMDk0Ljc3MSwyLjIsMi4yLDAsMCwxLDEuODk0LDIuMjM1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuMTY4IC0zKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+);
+                        @include media($mobile-sm) {
+                            font-size: 1.3em;
+                            margin-right: 0;
+                            margin-bottom: .6em;
+                            margin-top: .3em;
+                        }
+                    }
+                    #reqButton {
+                        font-size: 1.2em;
+                        background-color: $tac-purple;
+                        color: #fff;
+                        display: inline-block;
+                        border: 2px solid $tac-purple;
+                        padding: .1em .7em;
+                        font-weight: normal;
+                        text-decoration: none;
+                        i {
+                            color: #f4b95a;
+                            padding-right: 5px;
+                        }
+                        @include media($iphone8-horz) {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+        #navbarSupportedContent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 502;
+            flex-direction: column;
+            background: #fff;
+            h3 {
+                color: #fff;
+                background-color: $tac-purple;
+                font-size: 1.5em;
+                padding: .5em .9em .5em 1em;
+                position: relative;
+                z-index: 500;
+                margin-bottom: 0;
+                i {
+                    font-weight: normal;
+                    margin-left: .4em;
+                    cursor: pointer
+                }
+            }
+            .region-nav-main {
+                align-self: flex-start;
+                width: 100%;
+                position: relative;
+                z-index: 500;
+                background: #fff;
+                .navbar-nav {
+                    flex-direction: column;
+                    .nav-item {
+                        margin-bottom: 0;
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $tac-purple;
+                        }
+                        a {
+                            color: $tac-purple;
+                            padding: 1rem 1.4rem;
+                            font-size: 1em;
+                            line-height: 1.4em;
+                            &:after {
+                                font-family: FontAwesome;
+                                font-weight: normal;
+                                font-size: 1.3em;
+                                content: '\f105';
+                                float: right;
+                            }
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                font-weight: bold;
+                                background-color: rgba($tac-purple, .15);
+                            }
+                        }
+                    }
+                }
+            }
+            &.show #shade {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: #333;
+                opacity: .6;
+                z-index: 499;
+            }
+        }
+
+    }  
+    .navbar-expand-lg .navbar-collapse.collapse:not(.show) {
+        display: none!important
+    }
+}
+

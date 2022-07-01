@@ -1,0 +1,24 @@
+// Define new variables.
+
+// mixin
+@mixin media($query) {
+
+    @media screen and ($query) {
+      @content;
+    }
+}
+
+// colors
+$tac-purple: #5d205b;
+$tac-palepurp: #F0EDF2;
+$tac-green: #045F5F;
+
+
+
+// media rules
+
+$iphone8-vert: 'max-width: 375px';
+$iphone8-horz: 'max-width: 667px';
+$mobile-sm: 'max-width: 768px';
+$midwidth: 'max-width:1450px';
+$smwidth: 'max-width:1215px';

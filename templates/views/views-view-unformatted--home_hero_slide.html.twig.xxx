@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div id="homeHeroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        {% set totalrows = rows[0]['#rows']|length %}
+        {% for row in rows %}
+        
+            {% set rownum = ( rownum | default(0) ) + 1 %}
+            {% set isactive = rownum == 1 ? 'active' : '' %}
+            <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to='{{ rownum -1 }}' class='{{ isactive }}' aria-current="true" aria-label="Slide {{ rownum }}"></button>
+     {% endfor %}
+    </div>
+
+    <div class="carousel-inner">
+        {% for row in rows %}
+        {% set rownum = ( rownum | default(0) ) + 1 %}
+        {%
+            set row_classes = [
+            default_row_class ? 'views-row',
+            'carousel-item',
+            rownum == 1 ? 'active'
+            ]
+        %}
+        <div{{ row.attributes.addClass(row_classes) }}>
+            {{- row.content -}}
+        </div>
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

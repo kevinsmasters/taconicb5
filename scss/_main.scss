@@ -1,0 +1,179 @@
+body {
+    margin-top: 0;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', 'Ideal Sans SSm A', 'Ideal Sans SSm B', 'Sentinel SSm A', 'Sentinel SSm B', Helvetica, Arial, sans-serif;;
+    color: #080808;
+    font-size: 15px;
+    @include media($mobile-sm) {
+        font-size: 12px;
+        .region-content {
+            padding: 0;
+        }
+    }
+    @include media($iphone8-vert){
+        font-size: 12px;
+    }
+    @include media($smwidth){
+        font-size: 11px;
+    }
+    @include media($midwidth){
+        font-size: 12px;
+    }
+    @include media($iphone8-horz){
+        font-size: 14px;
+    }
+    
+    main.node-11,
+    main.node-50 {
+        background: $tac-palepurp; 
+    }
+    h2 {
+        color: $tac-purple;
+        font-size: 2.4em;
+        margin: .1em 0 .8em;
+        font-weight: 600;
+        @include media($iphone8-horz) {
+            font-size: 2em;
+        }
+    }
+    a, a:hover {
+        color: $tac-purple;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    li, ol {
+        margin-bottom: .3em;
+    }
+
+    .page-header {
+        background-image: url('../assets/cn-pg-bg.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        height: calc(100vw / 4.41);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-weight: 600;
+            font-size: 4em;
+            margin-bottom: .3em;
+            @include media($iphone8-horz) {
+                font-size: 2em;
+            }
+        }
+        h2 {
+            font-weight: 500;
+            color: #fff;
+            font-size: 1.8em;
+            max-width: 1180px;
+            margin: 0 auto;
+            @include media($iphone8-horz) {
+                font-size: .7em;
+            }
+        }
+    }
+
+    .field--name-body {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1em 0;
+        @include media($iphone8-horz) {
+            padding-left: .5em;
+            padding-right: .5em;
+        }
+        h2 {
+            font-size: 1.8em;
+            @include media($iphone8-horz) {
+                font-size: 1.3em;
+            }
+        }
+        h3 {
+            margin-top: 1.2em;
+            margin-bottom: .8em;
+            font-size: 1.34em;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1.2em;
+            @include media($iphone8-horz) {
+                font-size: .8em;
+            }
+        }
+    }
+
+    #topCTA {
+        background: $tac-green;
+        color: #fff;
+        p {
+            margin: 0;
+            text-align: center;
+            a {
+                color: #fff;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+        }
+    }
+    .region-alerts {
+        display: none;
+        background: $tac-purple;
+        color: #fff;
+        position: relative;
+        padding-right: 60px;
+        & > i {
+            position: absolute;
+            top: 25%;
+            right: 20px;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        p {
+            margin-bottom: 0;
+            @include media($iphone8-horz) {
+                font-size: .8rem;
+                margin: 0 .5em;
+            }
+        }
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .modal {
+            .modal-dialog {
+                max-width: 900px;
+                @include media($iphone8-horz) {
+                    max-width: 90%;
+                }
+            }
+            .modal-content {
+                border-radius: 0;
+                .modal-header {
+                    border-bottom: none;
+                    h2 {
+                        color: #000;
+                        font-weight: 500;
+                        margin: 0;
+                        line-height: normal;
+                    }
+                }
+            }
+            
+            p {
+                color: #000;
+                font-size: .9em;
+            }
+        }
+    }
+
+    #losetheborder {
+        width: 460px;
+        margin: 0 auto;
+        min-height: 200px;
+        background-color: #fff;
+        -moz-box-shadow: 0 0 20px 10px #666;
+        -webkit-box-shadow: 0 0 20px #666;
+        text-align: center;
+        border-radius: 6px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,263 @@
+// home view block
+.view-featured-model-terms {
+    background: #fff;
+    @include media($mobile-sm) { 
+        padding-top: 1em;
+    }
+    .view-header {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .view-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1.3em;
+        .views-field-field-thumbnail {
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+        .views-field-name {
+            h3 {
+                text-align: center;
+                font-size: 1.8em;
+                margin-top: .3em;
+                padding: 0 1em;
+                font-weight: 600;
+            }
+        }
+        @include media($mobile-sm) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            .views-field-name h3 {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+// feature models page
+.path-featured-models {
+    .region-content {
+        padding: 0;
+    }
+    background-color: $tac-palepurp;
+    .view-featured-models {
+        #featuredModelTitle {
+            background-image: url('../assets/cn-pg-bg.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            height: calc(100vw / 4.41);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: 3.9em;
+                font-weight: 600;
+                @include media($iphone8-horz) {
+                    font-size: 1.4em;
+                }
+            }
+            h2 {
+                color: #fff;
+                font-size: 2.9em;
+                font-weight: 500;
+                @include media($iphone8-horz) {
+                    font-size: .8em;
+                }
+            }
+        }
+        #featuredModelCTA { 
+            background: #000;
+            color: #fff;
+            padding: 1em 0;
+            @include media($iphone8-horz) {
+                padding: .5em 0;
+            }
+            p {
+                font-size: 1.1em;
+                max-width: 1180px;
+                margin: 0 auto;
+                padding-left: 120px;
+                background-size: 81px 72px;
+                background-repeat: no-repeat;
+                background-position: 0 center;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MS4xMzgiIGhlaWdodD0iNzIuMzQ5IiB2aWV3Qm94PSIwIDAgODEuMTM4IDcyLjM0OSI+CiAgPGcgaWQ9InJhdF80XyIgZGF0YS1uYW1lPSJyYXQgKDQpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC0yNy42MDIpIj4KICAgIDxwYXRoIGlkPSJQYXRoXzE1MyIgZGF0YS1uYW1lPSJQYXRoIDE1MyIgZD0iTTQ0My43NDIsMjQwLjUyN2ExLjE5NCwxLjE5NCwwLDAsMC0uNDg1LDEuNjE3LDIyLjQyNCwyMi40MjQsMCwwLDEsMi41MjcsNy44ODYsMS4xOTQsMS4xOTQsMCwwLDAsMS4xODMsMS4wNDcsMS4yMTUsMS4yMTUsMCwwLDAsLjE0OS0uMDA5LDEuMTk0LDEuMTk0LDAsMCwwLDEuMDM3LTEuMzMzLDI0LjgsMjQuOCwwLDAsMC0yLjc5NC04LjcyMkExLjE5NCwxLjE5NCwwLDAsMCw0NDMuNzQyLDI0MC41MjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzcyLjU2NiAtMTc4LjkwNSkiIGZpbGw9IiNmZGZkZmQiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzE1NCIgZGF0YS1uYW1lPSJQYXRoIDE1NCIgZD0iTTE4LjAwNiwxOTcuNDQ1SDYuNjQxYTQuMjUzLDQuMjUzLDAsMCwxLTIuMTY0LTcuOTE1bDcuOTU5LTQuN2ExLjE5NCwxLjE5NCwwLDAsMCwuMzMyLTEuNzY0LDkuOSw5LjksMCwwLDEsLjA5My0xMi4zMjQsOS45NDksOS45NDksMCwwLDEsNS41MDktMy40MzcsMS4xOTQsMS4xOTQsMCwxLDAtLjUyOC0yLjMyOSwxMi4zLDEyLjMsMCwwLDAtOS41NjcsMTEuOTg4LDEyLjE1NSwxMi4xNTUsMCwwLDAsMS44MzcsNi40NjZsLTYuODUxLDQuMDQ5YTYuNjQxLDYuNjQxLDAsMCwwLDMuMzc5LDEyLjM1OUgxOC4wMDZhMS4xOTQsMS4xOTQsMCwxLDAsMC0yLjM4OFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTExNS40NzQpIiBmaWxsPSIjZmRmZGZkIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8xNTUiIGRhdGEtbmFtZT0iUGF0aCAxNTUiIGQ9Ik0xMzkuMzEzLDE2MS43MTdhOS45NTYsOS45NTYsMCwwLDEsNi43MzgsNS43MjcsMS4xOTQsMS4xOTQsMCwwLDAsMS43MDUuNTU4bDYuODQzLTQuMDQ0YTIyLjg3NSwyMi44NzUsMCwwLDEsMTIuNzMxLTMuMywxLjE5NCwxLjE5NCwwLDAsMCwuMS0yLjM4NiwyNS41NjYsMjUuNTY2LDAsMCwwLTE0LjA0MywzLjYyOGwtNS43MzgsMy4zOTFhMTIuMzYyLDEyLjM2MiwwLDAsMC03Ljc2My01Ljg5NSwxLjE5NCwxLjE5NCwwLDEsMC0uNTcsMi4zMTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE2LjM2OCAtMTA5Ljg1MSkiIGZpbGw9IiNmZGZkZmQiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzE1NiIgZGF0YS1uYW1lPSJQYXRoIDE1NiIgZD0iTTk4LjAzNSwyMDQuOTJhMS4xOTQsMS4xOTQsMCwwLDAsMi4zODgsMCw2LjcyMyw2LjcyMywwLDEsMC0xMy40NDYsMCwxLjE5NCwxLjE5NCwwLDAsMCwyLjM4OCwwLDQuMzM1LDQuMzM1LDAsMSwxLDguNjY5LDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzMuMTI5IC0xNDMuNDM0KSIgZmlsbD0iI2ZkZmRmZCIvPgogICAgPHBhdGggaWQ9IlBhdGhfMTU3IiBkYXRhLW5hbWU9IlBhdGggMTU3IiBkPSJNMTAyLjIwOCwyOTguODgydi0xLjAyYTEuMTk0LDEuMTk0LDAsMSwwLTIuMzg4LDB2MS4wMmExLjE5NCwxLjE5NCwwLDEsMCwyLjM4OCwwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTgzLjkyOCAtMjI2LjIyOCkiIGZpbGw9IiNmZGZkZmQiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzE1OCIgZGF0YS1uYW1lPSJQYXRoIDE1OCIgZD0iTTE5MS4wMTUsMzI5LjNhMjYuNzI4LDI2LjcyOCwwLDAsMCwuNTMxLTMuNCwxLjE5NCwxLjE5NCwwLDAsMC0yLjM3OS0uMjEzLDI0LjY1LDI0LjY1LDAsMCwxLS44MjksNC40NzUsMi4xLDIuMSwwLDAsMS0yLjAwOSwxLjUyMUgxMzlhMS4xOTQsMS4xOTQsMCwxLDAsMCwyLjM4OEgxODYuMzNhNC40OTIsNC40OTIsMCwwLDAsMy45NTYtMi4zOTJoLjM4OWEzLjk0NSwzLjk0NSwwLDAsMSwwLDcuODlIMTU4LjAxNGE1LjA0Nyw1LjA0NywwLDAsMCwwLDEwLjA5NGg1LjQ0OGExLjE5NCwxLjE5NCwwLDAsMCwwLTIuMzg4aC01LjQ0OGEyLjY1OSwyLjY1OSwwLDAsMSwwLTUuMzE4aDMyLjY2MWE2LjMzMyw2LjMzMywwLDAsMCwuMzQtMTIuNjU2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExNS44NjkgLTI0OS43MDkpIiBmaWxsPSIjZmRmZGZkIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8xNTkiIGRhdGEtbmFtZT0iUGF0aCAxNTkiIGQ9Ik0zNDQuNjY1LDEzOC41OTJoMi40ODR2Mi40ODRhMS43NjksMS43NjksMCwwLDAsMS43NjcsMS43NjdoNi41OTVhMS43NjksMS43NjksMCwwLDAsMS43NjctMS43Njd2LTIuNDg0aDIuNDg0YTEuNzY5LDEuNzY5LDAsMCwwLDEuNzY3LTEuNzY3VjEzMC4yM2ExLjc2OSwxLjc2OSwwLDAsMC0xLjc2Ny0xLjc2N2gtMi40ODRWMTI1Ljk4YTEuNzY5LDEuNzY5LDAsMCwwLTEuNzY3LTEuNzY3aC02LjU5NWExLjc2OSwxLjc2OSwwLDAsMC0xLjc2NywxLjc2N3YyLjQ4NGgtMi40ODRhMS43NjksMS43NjksMCwwLDAtMS43NjcsMS43Njd2Ni41OTVBMS43NjksMS43NjksMCwwLDAsMzQ0LjY2NSwxMzguNTkyWm0uNjIxLTcuNzRoMi40ODRhMS43NjksMS43NjksMCwwLDAsMS43NjctMS43NjdWMTI2LjZoNS4zNTJ2Mi40ODRhMS43NjksMS43NjksMCwwLDAsMS43NjcsMS43NjdoMi40ODRWMTM2LjJoLTIuNDg0YTEuNzY5LDEuNzY5LDAsMCwwLTEuNzY3LDEuNzY3djIuNDg0aC01LjM1MnYtMi40ODRhMS43NjksMS43NjksMCwwLDAtMS43NjctMS43NjdoLTIuNDg0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI4OC4zMDUgLTgxLjIyOSkiIGZpbGw9IiNmZGZkZmQiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzE2MCIgZGF0YS1uYW1lPSJQYXRoIDE2MCIgZD0iTTE3NC42MjksNDEuOTgxaDIuNDg0djIuNDg0YTEuNzY5LDEuNzY5LDAsMCwwLDEuNzY3LDEuNzY3aDYuNTk1YTEuNzY5LDEuNzY5LDAsMCwwLDEuNzY3LTEuNzY3VjQxLjk4MWgyLjQ4NGExLjc2OSwxLjc2OSwwLDAsMCwxLjc2Ny0xLjc2N1YzMy42MTlhMS43NjksMS43NjksMCwwLDAtMS43NjctMS43NjdoLTIuNDg0VjI5LjM2OWExLjc2OSwxLjc2OSwwLDAsMC0xLjc2Ny0xLjc2N2gtNi41OTVhMS43NjksMS43NjksMCwwLDAtMS43NjcsMS43Njd2Mi40ODRoLTIuNDg0YTEuNzY5LDEuNzY5LDAsMCwwLTEuNzY3LDEuNzY3djYuNTk1YTEuNzY5LDEuNzY5LDAsMCwwLDEuNzY3LDEuNzY3Wm0uNjIxLTcuNzRoMi40ODRhMS43NjksMS43NjksMCwwLDAsMS43NjctMS43NjdWMjkuOTloNS4zNTJ2Mi40ODRhMS43NjksMS43NjksMCwwLDAsMS43NjcsMS43NjdIMTg5LjF2NS4zNTJIMTg2LjYyYTEuNzY5LDEuNzY5LDAsMCwwLTEuNzY3LDEuNzY3djIuNDg0SDE3OS41VjQxLjM2YTEuNzY5LDEuNzY5LDAsMCwwLTEuNzY3LTEuNzY3SDE3NS4yNVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNDUuMzQxKSIgZmlsbD0iI2ZkZmRmZCIvPgogIDwvZz4KPC9zdmc+);
+                a {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+                @include media($iphone8-horz) {
+                    background-image: none;
+                    padding: 0 .5em;
+                    font-size: .7em;
+                }
+            }
+        }
+        #featureModelFilter {
+            background: #fff;
+            -webkit-box-shadow: 0px 5px 15px -6px #000000; 
+            box-shadow: 0px 5px 15px -6px #000000;
+            margin-top: 0;
+            margin-bottom: 3em;
+            ul {
+                max-width: 1180px;
+                margin: 0 auto;
+                list-style-type: none;
+                display: flex;
+                padding-left: 0;
+                li {
+                    flex-grow: 1;
+                    text-align: center;
+                    margin-bottom: 0;
+                    a {
+                        font-size: .9em;
+                        font-weight: 500;
+                        display: block;
+                        padding: 1em 4em;
+                        border-right: 1px solid #707070;
+                        &.active {
+                            color: #fff;
+                            background: $tac-purple;
+                        }
+                    }
+                }
+                @include media($iphone8-horz) {
+                    flex-direction: column;
+                }
+            }
+        }
+        .view-filters {
+            display: none;
+        }
+        .view-content .views-infinite-scroll-content-wrapper {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 2.2em;
+            row-gap: 2.2em;
+            @include media($iphone8-horz) {
+                grid-template-columns: 1fr 1fr;
+                font-size: 10px;
+            }
+            .views-row {
+                display: flex;
+                flex-direction: column;
+                padding: 1.5em;
+                border: 1px solid gray;
+                background: #fff;
+                position: relative;
+                .views-field-field-thumbnail {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .views-field-title {
+                    font-size: 1.4em;
+                    line-height: 1em;
+                    margin-top: .9em;
+                    margin-bottom: .9em;
+                    a {
+                        color: #080808;
+                        font-weight: normal;
+                    }
+                }
+                .views-field-field-quote-link {
+                    font-size: 1.5em;
+                    margin-top: auto;
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        color: #fff;
+                        background: $tac-purple;
+                        font-weight: 500;
+                        padding: .3em .6em;
+                        align-items: center;
+                        margin-bottom: .4em;
+                        i {
+                            margin-left: auto;
+                            color: #FFB307;
+                        }
+                    }
+                }
+                .views-field-field-flyer-link {
+                    font-size: 1.5em;
+                    a {
+                        display: flex;
+                        flex-direction: row;
+                        color: $tac-purple;
+                        font-weight: 500;
+                        padding: .3em .6em;
+                        align-items: center;
+                        margin-bottom: .4em;
+                        border: 1px solid $tac-purple;
+                        i {
+                            margin-left: auto;
+                        }
+                    }
+                }
+                .views-field-term-node-tid .field-content span {
+                    display: inline-block;
+                    padding: .5em 1em .5em .5em;
+                    background: #000;
+                    color: #fff;
+                    width: auto;
+                    position: absolute;
+                    top: 1.5em;
+                    left: 1.5em;
+                    &.diet-induced-models {
+                        background: rgba(0,0,0,.75);
+                    }
+                    &.humanized-models {
+                        background: rgba(213,7,38,.75);
+                    }
+                    &.gems-models {
+                        background: rgba(4,95,95,.75);
+                    }
+                    &.standard-strains {
+                        background: rgba(255,179,7,.75);
+                    }
+                }
+            }
+        }
+        .js-pager__items {
+            text-align: center;
+            margin-top: 1.8em;
+            a.button {
+                background-color: #fff;
+                text-transform: uppercase;
+                font-size: 1.6em;
+                color: $tac-purple;
+                border: 1px solid $tac-purple;
+                border-radius: 0;
+                padding: .5em 2em;
+                @include media($iphone8-horz) {
+                    font-size: 1.3em;
+                }
+            }
+        }
+        #featuredModelViewAll {
+            margin-top: 3em;
+            padding: .6em 0;
+            background-color: $tac-green;
+            color: #fff;
+            text-align: center;
+            p {
+                margin-bottom: 0;
+                font-size: 1.8em;
+                @include media($iphone8-horz) {
+                    font-size: 1.2em;
+                }
+            }
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}

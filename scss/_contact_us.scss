@@ -1,0 +1,20 @@
+.node-19 {
+    .field--name-body {
+        color: $tac-purple;
+        #contactTable {
+            thead tr th {
+                background: $tac-purple;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 1.1em;
+            }
+        }
+    }
+    #block-contactform {
+        background: $tac-palepurp;
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+}

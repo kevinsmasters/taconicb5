@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * TaconicB5 theme file.
+ */
+
+function taconicb5_preprocess_page(&$variables) {
+    
+  if (!empty($variables['node']) && !empty($variables['node']->field_secondary_title)) {
+    $variables['secondary_title'] = $variables['node']->field_secondary_title->value;
+
+  }
+}

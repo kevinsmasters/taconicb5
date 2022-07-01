@@ -1,0 +1,16 @@
+global-styling:
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js: { type: external }
+    js/jquery.leaveNotice.min.js: {}
+    js/app.js: {}
+  css:
+    theme:
+      https://cloud.typography.com/6093312/630704/css/fonts.css: { type: external }
+      https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css: { type: external }
+      https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css: { type: external }
+      css/font-awesome/css/font-awesome.min.css: {}
+      css/jquery.leaveNotice.css: {}
+      css/style.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

@@ -1,0 +1,66 @@
+.path-frequently-asked-questions,
+.path-privacy-cookie-policy {
+    #accordionTitle {
+        background-image: url('../assets/cn-pg-bg.jpg');
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        height: calc(100vw / 4.41);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: 3.9em;
+            font-weight: 600;
+            @include media($iphone8-horz) {
+                font-size: 2em;
+            }
+        }
+        h2 {
+            color: #fff;
+            font-size: 2.9em;
+            font-weight: 500;
+            @include media($iphone8-horz) {
+                font-size: .7em;
+            }
+        }
+    }
+    #privacyText {
+        max-width: 1180px; 
+        margin: .5em auto;
+    }
+    .view-content { 
+        max-width: 1180px; 
+        margin: 0 auto;
+        padding: 1em 0;
+        .accordion-item {
+            border-right: none;
+            border-left: none;
+            border-top: none;
+        }
+        h2.accordion-header {
+            margin: 0;
+            .accordion-button {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                text-transform: uppercase;
+                font-size: .8em;
+                color: $tac-purple;
+                &::after {
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMi42MzYiIGhlaWdodD0iMTQuNjU2IiB2aWV3Qm94PSIwIDAgMjIuNjM2IDE0LjY1NiI+CiAgPGcgaWQ9Ikdyb3VwXzE0IiBkYXRhLW5hbWU9Ikdyb3VwIDE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOC40NDEpIj4KICAgIDxwYXRoIGlkPSJJY29uX21hdGVyaWFsLWV4cGFuZC1tb3JlIiBkYXRhLW5hbWU9Ikljb24gbWF0ZXJpYWwtZXhwYW5kLW1vcmUiIGQ9Ik0yOC45NzYsMTIuODg1bC04LjY1OCw5LjA1OEwxMS42NiwxMi44ODUsOSwxNS42NzQsMjAuMzE4LDI3LjU0MSwzMS42MzYsMTUuNjc0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuNTU5IC0xMi44ODUpIiBmaWxsPSIjN2ExOTg5Ii8+CiAgPC9nPgo8L3N2Zz4=);
+                }
+                @include media($iphone8-horz) {
+                    font-size: .6em;
+                }
+            }
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #fff;
+            color: $tac-purple;
+            box-shadow: none;
+        }
+        h2#heading0 .accordion-button.collapsed {
+            border-top: 1px solid rgba(0,0,0,.125);
+        }
+    }
+}

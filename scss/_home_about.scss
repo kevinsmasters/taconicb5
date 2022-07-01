@@ -1,0 +1,13 @@
+.block-block-contente4af0279-6563-4dd1-8230-74fcc00f951b {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    background: #F4F4F4;
+    .field--name-body {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: .8em 0 2.5em;
+        @include media($mobile-sm) { 
+            font-size: 1.3em;
+        }
+    }
+}

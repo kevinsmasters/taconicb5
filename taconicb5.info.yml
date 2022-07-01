@@ -1,0 +1,22 @@
+name: TaconicB5
+type: theme
+description: 'TaconicB5 subtheme based on Bootstrap 5 theme.'
+core_version_requirement: '^8.9 || ^9'
+'base theme': bootstrap5
+libraries:
+  - taconicb5/global-styling
+stylesheets-remove:
+  - '@bootstrap5/css/style.css'
+regions:
+  alerts: 'Sitewide Alerts'
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  top_cta: 'Top CTA'
+  content: 'Main content'
+  footer: Footer
+version: 1.0.0-beta3
+project: bootstrap5
+datestamp: 1622961960

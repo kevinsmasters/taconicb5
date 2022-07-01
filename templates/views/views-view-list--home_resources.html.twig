@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ */
+#}
+{% if attributes -%}
+  <div{{ attributes }} data-glide-el="track">
+{% endif %}
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+
+  <{{ list.type }}{{ list.attributes }}>
+
+    {% for row in rows %}
+      <li{{ row.attributes }}>
+        <div class='resource-card'>
+          {{- row.content -}}
+        </div>
+      </li>
+    {% endfor %}
+
+  </{{ list.type }}>
+
+{% if attributes -%}
+  </div>
+{% endif %}
+
+<div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24">
+                        <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z">
+                        </path>
+                    </svg>
+                </button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+                        </path>
+                    </svg>
+                </button>
+              </div>

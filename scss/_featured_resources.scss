@@ -1,0 +1,105 @@
+.view-home-resources {
+    background: #F4F4F4;
+    padding: .8em 0 2.5em;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    .row {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .view-header {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .item-list.glide__track {
+
+        max-width:1180px;
+        margin: 0 auto;
+    }
+    .glide__slides {
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            padding: .6em;
+            border: 1px solid gray;
+            background: #fff;
+            max-width: 284px;
+
+            .views-field-field-re {
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+            .views-field-title {
+                h3 {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    letter-spacing: .1em;
+                    margin-top: .3em;
+                }
+            }
+            .views-field-body {
+                p {
+                    font-size: .9em;
+                    margin-bottom: 1.7em;
+                }
+            }
+            .views-field-field-cta-link {
+                align-self: flex-end;
+                margin-top: auto;
+                margin-bottom: .2em;
+                .field-content {
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        background: $tac-purple;
+                        padding: .4em .6em .4em 1em;
+                        font-size: 1em;
+                        i {
+                            color: #FFB307;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .glide__arrows {
+        .glide__arrow--left {
+            left: 0;
+        }
+        .glide__arrow--left, 
+        .glide__arrow--right {
+            opacity: .2;
+            border-radius: 45px;
+            background: #fff;
+        }
+        .glide__arrow--right:hover, 
+        .glide__arrow--left:hover {
+            opacity: 1;
+        }
+    }
+    .view-content { /* reference */
+ 
+        @include media($mobile-sm) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            .views-row {
+                margin-bottom: .7em;
+            }
+            .views-field-body p {
+                font-size: 1.1em;
+            }
+        }
+        @include media($iphone8-horz) {
+            grid-template-columns: 1fr;
+            .views-row {
+                width: 90%;
+                margin: .7em auto;
+            }
+        }  
+    }
+}
